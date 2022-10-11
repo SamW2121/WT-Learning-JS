@@ -5,21 +5,26 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Example 01</title>
+    <title>Example 06</title>
 
-</head>
-<body>
+    <script src="./assets/js/example-06.js" defer></script>
+<body onmousemove="mousePosition(event)">
 
-<h1>Example 01</h1>
-<h2>HTML file with Embedded JavaScript</h2>
+<h1>Example 6</h1>
+<h2>Interaction</h2>
+
+<p>
+    <button onclick="upButton()" >Up</button>
+    <button onclick="downButton()">Down</button>
+</p>
+
+<div id="mouse-position"></div>
+
 <div id="output-area">
     <p>Nothing to see here</p>
     <p>JavaScript must be enabled</p>
 </div>
 
-<script>
-    document.getElementById('output-area').innerText = "Hello World"
-</script>
 
 </body>
 </html>
