@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Handlers 1</title>
+
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+<body class="h-full">
+
+<header class="bg-gray-900 text-gray-50 w-100 p-4 flex flex-row gap-6">
+    <h1>Example XX</h1>
+    <nav>
+        <a href="example-01.html">Example 1</a>
+        <a href="example-01.html">Example 2</a>
+        <a href="example-01.html">Example 3</a>
+        <a href="example-01.html">Example 4</a>
+
+    </nav>
+</header>
+<main class="w-4/5 mx-auto my-12">
+    <article class="border border-blue-900">
+
+        <header class="bg-blue-900 px-2">
+            <h2 class="text-2xl py-4 text-white">
+                Setting up for Tailwind CSS (For remaining examples)
+            </h2>
+            <p class="py-2 text-sm text-gray-300">This is based on the instructions on
+                <a href="https://tailwindcss.com/docs/installation">
+                    https://tailwindcss.com/docs/installation
+                </a>
+            </p>
+        </header>
+
+        <div class="my-2 mx-2 p-2">
+
+
+            <h3 class="py-2 mt-4 text-lg font-bold">Modify the WT-Learning-JS "template" folder</h3>
+            <p>Open your WT-Learning-JS project.</p>
+            <p>Expand the <code class="text-lime-700 bg-gray-200 p-0.5">Session-xx</code> folder</p>
+            <p>Create a new folder called <code class="text-lime-700 bg-gray-200 p-0.5">src</code> in the <code
+                    class="text-lime-700 bg-gray-200 p-0.5">Session-xx</code> folder</p>
+            <p>In this folder create a new css file <code
+                    class="text-lime-700 bg-gray-200 p-0.5">tailwind-main.css</code>.</p>
+            <p>Add the <code class="text-lime-700 bg-gray-200 p-0.5">@tailwind</code> directives for each of Tailwind’s
+                layers to your
+                <code class="text-lime-700 bg-gray-200 p-0.5">tailwind-main.css</code> CSS file.</p>
+
+            <pre class="my-2 p-2 bg-gray-100 text-blue-800 border border-blue-400 rounded-lg "><code>@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</code></pre>
+
+
+            <h3 class="py-2 mt-4 text-lg font-bold">Install Tailwind CSS</h3>
+            <p>
+                Install tailwindcss via npm, and create your <code class="text-lime-700 bg-gray-200 p-0.5">tailwind.config.js</code>
+                file.
+            </p>
+
+            <pre class="my-2 p-2 bg-gray-100 text-blue-800 border border-blue-400 rounded-lg "><code>npm install -D tailwindcss
+npx tailwindcss init
+</code></pre>
+
+            <h3 class="py-2 mt-4 text-lg font-bold">Configure your template paths</h3>
+            <p> Add the paths to all of your template files in your <code class="text-lime-700 bg-gray-200 p-0.5">tailwind.config.js</code>
+                file.</p>
+
+            <pre class="my-2 p-2 bg-gray-100 text-blue-800 border border-blue-400 rounded-lg "><code>/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: [
+        "./src/**/*.{html,js}",
+        "./**/*.{html,js}"
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+}
+</code></pre>
+
+            <h3 class="py-2 mt-4 text-lg font-bold">Start the Tailwind CLI build process</h3>
+            <p>Run the CLI tool to scan your template files for classes and build your CSS.</p>
+
+            <pre class="my-2 p-2 bg-gray-100 text-blue-800 border border-blue-400 rounded-lg "><code>npx tailwindcss -i ./src/tailwind-main.css -o ./assets/css/tailwind.css --watch
+</code></pre>
+
+
+            <h3 class="py-2 mt-4 text-lg font-bold">Start using Tailwind in your HTML</h3>
+
+            <p>Add your compiled CSS file to the <code class="text-lime-700 bg-gray-200 p-0.5">head</code> and start
+                using Tailwind’s utility classes to style
+                your content.</p>
+
+            <pre class="my-2 p-2 bg-gray-100 text-blue-800 border border-blue-400 rounded-lg "><code>&lt;link href="/assets/css/output.css" rel="stylesheet">
+</code></pre>
+
+            <p>This file uses the tailwind installation that the steps above explain.</p>
+        </div>
+    </article>
+</main>
+
+<footer class="mt-6 px-2 py-6 bg-neutral-700 text-neutral-200 text-sm flex flex-row gap-12">
+    <div class="flex grow">&copy; Copyright 2022 Adrian Gould</div>
+    <div class="flex-right">Creative Commons License to be added.</div>
+</footer>
+</body>
+</html>
