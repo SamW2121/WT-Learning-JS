@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>JavaScript | Session 03 | Example 01</title>
+    <title>JavaScript | Session 03 | Example 03</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/tailwind.css">
 
     <!-- JS (Deferred) -->
-    <script src="assets/js/jokes.js"></script>
-    <script src="assets/js/example-01.js" defer></script>
+    <script src="assets/js/example-03.js" defer></script>
 
     <!--
-    Filename: example-01.html
+    Filename: example-03.html
     Project:  WT-Learning-JS
     Author:   Adrian Gould <adrian.gould@nmtafe.wa.edu.au>
     Created:  11/10/2022
@@ -35,26 +34,21 @@
 </header>
 
 <main class="w-4/5 mx-auto my-12 grow">
-    <h1 class="text-4xl mb-8 mt-4 text-zinc-500">Random Joke</h1>
+    <h1 class="text-4xl mb-8 mt-4 text-zinc-500">Digital Clock</h1>
 
-    <div id="joke"
-         class="w-full text-xl font-light
-                bg-stone-700 text-white p-6 m-6 rounded-xl h-64">
-        <h3 id="joke-topic" class="text-3xl mb-4"></h3>
-        <p id="joke-content">
-        Press the button for a random joke.
-        </p>
-    </div>
 
-    <div class="p-2 m-4 mx-auto w-64 ">
-        <button type="button" id="get-joke"
-                class="w-64 p-4 rounded-full
-                       bg-emerald-700 text-white border-2 border-emerald-900
-                       hover:bg-emerald-100 hover:text-black hover:border-emerald-500
-                       transition ">
-            New Joke Please
-        </button>
-    </div>
+    <section class="w-full bg-stone-100 border border-stone-500 rounded-xl overflow-hidden">
+        <div id="banner"
+             class="text-3xl bg-stone-300 p-4">
+            Your local time
+        </div>
+        <div id="clock"
+             class="ease-in-out transition duration-500 bg-stone-700
+                    text-stone-50 p-4 text-4xl rounded-b-lg">
+            ...
+        </div>
+    </section>
+
 
 </main>
 
