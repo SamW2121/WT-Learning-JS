@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>JavaScript | Session 05 | Cart Layout</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- JS (Deferred) -->
+
+
+    <!--
+    Filename: demo-template.html
+    Project:  WT-Learning-JS
+    Author:   Adrian Gould <adrian.gould@nmtafe.wa.edu.au>
+    Created:  11/10/2022
+    Version:  ...
+    -->
+
+</head>
+<body class="h-screen flex flex-col">
+
+<header class="bg-gray-900 text-gray-50 w-100 p-4 flex flex-row gap-6">
+    <h1 class="text-bold"><a href="index.html" class="text-indigo-500"> JavaScript 5</a></h1>
+    <nav class="flex flex-row gap-4">
+        <a href="cart-layout.html" class="border-b-2 border-indigo-400">Cart layout</a>
+        <a href="cart-js-1.html">Cart JS Part I</a>
+        <a href="cart-js-2.html">Cart JS Part II</a>
+        <a href="cart-js-3.html">Cart JS Part III</a>
+    </nav>
+</header>
+
+<main class="w-4/5 mx-auto my-12 grow">
+    <h1 class="text-4xl mb-8 mt-4 text-zinc-500">Setting Up</h1>
+
+    <div class="w-full text-xl font-light
+                bg-zinc-200 text-zinc-700 p-6 rounded-xl
+                border border-zinc-300
+                shadow-sm shadow-zinc-500">
+        <p class="my-2">See <a href="../Session-03" class="text-black text-blue-500">Session-03</a> for how to set up.</p>
+
+    </div>
+
+    <div class="mt-8 p-6 rounded-xl
+                bg-zinc-100 text-zinc-700
+                border border-zinc-300
+                shadow-sm shadow-zinc-500
+                flex gap-8">
+
+        <section id="cart" class="w-1/4 text-sm mt-16">
+
+            <header class="bg-zinc-900 text-zinc-50 text-bold rounded-t-lg text-xs">
+                <h3 class="text-lg text-bold my-2 px-2">Cart</h3>
+                <div class="flex flex-cols  pb-1 gap-1 ">
+                    <p class="p-1 text-zinc-900 text-bold">&times;</p>
+                    <p class="p-1 flex-grow">Item</p>
+                    <p class="p-1 text-right w-4"></p>
+                    <p class="p-1 text-right min-w-8 w-8">Qty</p>
+                    <p class="p-1 text-right border-r border-zinc-900 min-w-16 w-16">Price</p>
+                    <p class="p-1 text-right min-w-16 w-16">Total</p>
+                </div>
+            </header>
+
+            <div id="cart-content">
+                <div class="flex flex-cols border-zinc-400 border border-t-0 text-xs
+                            hover:bg-zinc-300 transition duration-500">
+                    <p class="p-1 bg-red-500 text-white text-bold">&times;</p>
+                    <p class="p-1 flex-grow">Galaxy A7 Tab</p>
+                    <p class="p-1 text-right min-w-8 w-8">10</p>
+                    <p class="p-1 text-right w-4">&times;</p>
+                    <p class="p-1 text-right border-r border-zinc-400 min-w-16 w-16">$250.75</p>
+                    <p class="p-1 text-right min-w-16 w-16 ">$2507.50</p>
+                </div>
+
+                <div class="flex flex-cols border-zinc-400 border border-t-0 text-xs
+                            hover:bg-indigo-200 transition duration-500">
+                    <p class="p-1 bg-red-500 text-white text-bold">&times;</p>
+                    <p class="p-1 flex-grow">USB-3 64GB Thumb Drive</p>
+                    <p class="p-1 text-right min-w-8 w-8">1</p>
+                    <p class="p-1 text-right">&times;</p>
+                    <p class="p-1 text-right border-r border-zinc-400 min-w-16 w-16">$25.99</p>
+                    <p class="p-1 min-w-16 w-16 text-right">$25.99</p>
+                </div>
+            </div>
+
+            <footer id="cart-total"
+                    class="flex flex-cols border-zinc-400 border border-t-0 py-1 gap-1 bg-zinc-200 text-xs rounded-b-lg">
+                <p class="px-1 pl-6 text-right">
+                    <a href="" class="text-red-800 hover:text-red-500">Empty Cart</a>
+                </p>
+                <p class="px-1 flex-grow text-right font-bold">Total</p>
+                <p class="px-1 min-w-16 w-16 text-right">$2533.49</p>
+            </footer>
+
+        </section>
+
+        <section class="flex-grow">
+            <header class="">
+                <h3 class="text-lg text-bold mt-2 p-2">Items for Sale</h3>
+            </header>
+
+            <div id="items" class="grid grid-cols-4 gap-4 py-4">
+
+                <div id="item" class="border-zinc-400 border rounded">
+                    <p class="bg-zinc-500 text-white p-2">Galaxy A7 Tab</p>
+                    <div class="text-xs">
+                        <img src="assets/images/17137108849_c98e835d5f.jpg" class="w-full"
+                             alt="Plate with gold edging, embossed">
+                        <p class="p-2">
+                            ABOUT THE PRODUCT
+                        </p>
+                    </div>
+                    <footer class="flex flex-cols text-sm bg-zinc-500 text-zinc-50">
+                        <p class="px-2 flex-grow ">Price Each</p>
+                        <p class="px-2 ">$2533.49</p>
+                    </footer>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+</main>
+
+<footer class="mt-6 px-6 py-6 bg-neutral-700 text-neutral-200 text-sm flex flex-row gap-12">
+    <div class="flex grow">&copy; Copyright 2022 Adrian Gould</div>
+    <div class="flex-right">Creative Commons License to be added.</div>
+</footer>
+</body>
+</html>
