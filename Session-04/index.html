@@ -28,7 +28,7 @@
     <h1 class="text-bold"><a href="index.html" class="text-rose-500"> JavaScript </a></h1>
     <nav class="flex flex-row gap-4">
         <a href="async-timers.html">Async and Timers</a>
-        <a href="#">...</a>
+        <a href="async-timers-stranger.html">Timers, Async and Stranger Things</a>
         <a href="#">...</a>
         <a href="#">...</a>
     </nav>
@@ -40,9 +40,29 @@
     <div class="w-full text-xl font-light
                 bg-zinc-200 text-zinc-700 p-6 rounded-xl
                 border border-zinc-300
-                shadow-sm shadow-zinc-500
-                grid grid-cols-4 gap-6">
-        <p>See <a href="../Session-03" class="text-black text-blue-500">Session-03</a> for how to set up.</p>
+                shadow-sm shadow-zinc-500">
+        <p class="my-2">See <a href="../Session-03" class="text-black text-blue-500">Session-03</a> for how to set up.</p>
+
+        <h2>Three columns</h2>
+        <p class="my-2">Create a 3 column layout in Tailwind using the following Emmet code
+            (remember this is on ONE line):</p>
+        <pre class="text-sm my-6 bg-blue-300 p-4 text-black rounded-md"><code>div.grid.grid-cols-3.gap-4.my-2>
+    (section.border.bg-stone-400.border-zinc-400.rounded-md.p-4>
+        p{Hello $}
+    )*3</code></pre>
+        <p class="my-2">Remember to press TAB at the end of the line.</p>
+        <p class="my-2">This creates a 3 column grid, with each section having a mid-stone background, a zinc border and padding inside the rectangle.</p>
+        <div class="grid grid-cols-3 gap-4 my-2">
+            <section class="border border-zinc-600 bg-stone-400 rounded-md p-4">
+                <p >Hello 1</p>
+            </section>
+            <section class="border border-zinc-600 bg-stone-400 rounded-md p-4">
+                <p >Hello 2</p>
+            </section>
+            <section class="border border-zinc-600 bg-stone-400 rounded-md p-4">
+                <p >Hello 3</p>
+            </section>
+        </div>
 
     </div>
 
