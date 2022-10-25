@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>JavaScript | Session 03 | Home</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- JS (Deferred) -->
+    <script src="assets/js/jokes.js"></script>
+    <script src="assets/js/example-01.js" defer></script>
+
+    <!--
+    Filename: demo-template.html
+    Project:  WT-Learning-JS
+    Author:   Adrian Gould <adrian.gould@nmtafe.wa.edu.au>
+    Created:  11/10/2022
+    Version:  ...
+    -->
+
+</head>
+<body class="h-screen flex flex-col">
+
+<header class="bg-gray-900 text-gray-50 w-100 p-4 flex flex-row gap-6">
+    <h1 class="text-bold"><a href="index.html" class="text-rose-500"> JavaScript </a></h1>
+    <nav class="flex flex-row gap-4">
+        <a href="example-01.html">Random Joke</a>
+        <a href="example-02.html">Wikipedia Search</a>
+        <a href="example-03.html">Digital Clock</a>
+        <a href="example-04.html">Calculator</a>
+    </nav>
+</header>
+
+<main class="w-4/5 mx-auto my-12 grow">
+    <h1 class="text-4xl mb-8 mt-4 text-zinc-500">Setting Up</h1>
+
+    <div class="w-full text-xl font-light
+                bg-stone-700 text-white p-6 rounded-xl
+                border-2 border-black
+                shadow-md shadow-zinc-600
+                grid grid-cols-4 gap-6">
+        <p>1) Installing TailwindCSS</p>
+        <div class="col-span-3 mb-4 flex flex-col gap-2">
+            <p>Open the terminal, then click on the V to open the terminal options, select the "<strong>Command Prompt</strong>" option.</p>
+            <p>This should put you in the folder with your and use the following commands:</p>
+            <pre class="text-sm text-amber-300"><code>
+npm install tailwindcss
+npm install @tailwindcss/forms
+npm install @tailwindcss/line-clamp
+npm install @tailwindcss/typography
+npx tailwind init
+            </code></pre>
+            <p></p>
+        </div>
+
+        <p>2 Configuring TailwindCSS</p>
+        <div class="col-span-3 mb-4 flex flex-col gap-2">
+            <p>Create a new folder called src and then the folders assets, assets/css, assets/js, assets...</p>
+            <p>Open the new <code>tailwind.config.js</code file</p>
+            <p>Edit the file to read:</p>
+            <pre class="text-sm text-amber-300"><code>
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,js}",
+    "./**/*.{html,js}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/forms'),
+  ],
+}
+            </code></pre>
+        </div>
+
+        <p>3 Adding the tailwind-main.css file</p>
+        <div class="col-span-3 mb-4 flex flex-col gap-2">
+            <p>Add the tailwind-main.css file to the src folder</p>
+            <p>Open the file and add</p>
+            <pre class="text-sm text-rose-300"><code>
+/** Filename: ./Session-xx/src/tailwind-main.css **/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+            </code></pre>
+        </div>
+
+        <p>3 Running tailwind</p>
+        <div class="col-span-3 mb-4 flex flex-col gap-2">
+            <p>Open the terminal and use the following command:</p>
+            <pre class="text-sm text-amber-300"><code>
+npx tailwindcss -i ./src/tailwind-main.css -o ./assets/css/tailwind.css --watch
+            </code></pre>
+
+            If you get an error, then you will need to open the Laragon terminal
+            and navigate to your project's folder, before then changing into the Session-03 folder.
+        </div>
+
+        <p>4 Previewing</p>
+        <div class="col-span-3 mb-4 flex flex-col gap-2">
+            <p>Hover over the HTML file and then click on the browser you wish to preview in.</p>
+            <p>Your page will be rendered.</p>
+            <p>The page will re-render when you save your files.</p>
+            <p>It may not pick up all changes immediately due to time to detect and then update the CSS file automatically.</p>
+        </div>
+
+        <p>5 Adding Classes</p>
+        <div class="col-span-3 mb-4 flex flex-col gap-2">
+            <p>Tailwind Has many classes to use. For example:</p>
+            <div class="grid grid-cols-3">
+                <code>text-blue-50</code>
+                <code>text-red-100</code>
+                <code>text-amber-500</code>
+                <code>text-stone-900</code>
+                <code>rounded</code>
+                <code>border</code>
+                <code>border-blue-500</code>
+                <code>mx-auto</code>
+                <code>m-6</code>
+                <code>p-2</code>
+                <code>py-6</code>
+                <code>gap-4</code>
+            </div>
+            <p>and many more...</p>
+        </div>
+    </div>
+
+</main>
+
+<footer class="mt-6 px-6 py-6 bg-neutral-700 text-neutral-200 text-sm flex flex-row gap-12">
+    <div class="flex grow">&copy; Copyright 2022 Adrian Gould</div>
+    <div class="flex-right">Creative Commons License to be added.</div>
+</footer>
+</body>
+</html>

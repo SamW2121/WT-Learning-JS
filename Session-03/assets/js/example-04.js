@@ -99,7 +99,7 @@ function inputDigit( digit ) {
 
 function inputDecimal( dot ) {
     if ( calculator.waitingForSecondOperand === true ) {
-        calculator.displayValue = '0.'
+        calculator.displayValue = '0' + dot
         calculator.waitingForSecondOperand = false;
         return
     }
@@ -132,7 +132,7 @@ function handleOperator( nextOperator ) {
     } else if ( operator ) {
         const result = calculate( firstOperand, inputValue, operator );
 
-        calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
+        calculator.displayValue = `${ parseFloat( result.toFixed( 7 ) ) }`;
         calculator.firstOperand = result;
     }
 
