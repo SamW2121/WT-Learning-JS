@@ -41,8 +41,9 @@
                 bg-zinc-200 text-zinc-700 p-6 rounded-xl
                 border border-zinc-300
                 shadow-sm shadow-zinc-500">
-        <p class="my-2">See <a href="../Session-03" class="text-black text-blue-500">Session-03</a> for how to set up.</p>
-
+        <p class="my-2">
+            See <a href="../Session-03" class="text-black text-blue-500">Session-03</a> for how to set up.
+        </p>
     </div>
 
     <div class="mt-8 p-6 rounded-xl
@@ -51,61 +52,67 @@
                 shadow-sm shadow-zinc-500
                 flex gap-8">
 
-        <section id="cart" class="w-1/4 text-sm mt-16">
+        <section id="cart" class="text-sm mt-16">
 
-            <header class="bg-zinc-900 text-zinc-50 text-bold rounded-t-lg text-xs">
-                <h3 class="text-lg text-bold my-2 px-2">Cart</h3>
-                <div class="flex flex-cols  pb-1 gap-1 ">
-                    <p class="p-1 text-zinc-900 text-bold">&times;</p>
-                    <p class="p-1 flex-grow">Item</p>
-                    <p class="p-1 text-right w-4"></p>
-                    <p class="p-1 text-right min-w-8 w-8">Qty</p>
-                    <p class="p-1 text-right border-r border-zinc-900 min-w-16 w-16">Price</p>
-                    <p class="p-1 text-right min-w-16 w-16">Total</p>
-                </div>
-            </header>
+            <table class="table w-full border-zinc-900 border rounded-t-lg">
+            <caption class="bg-zinc-900 text-zinc-50 text-bold rounded-t-lg ">
+                <h3 class="text-sm text-bold my-1">Your Cart</h3>
+            </caption>
+                <thead class="bg-zinc-900 text-zinc-50 text-bold">
+                <tr>
+                    <th class="p-1 text-zinc-900 text-bold">&times;</th>
+                    <th class="p-1 ">Item</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th class="p-1 text-right w-4"></th>
+                    <th class="p-1 text-right min-w-8 w-8">Qty</th>
+                    <th class="p-1 text-right border-r border-zinc-900 min-w-16 w-16">Price</th>
+                    <th class="p-1 text-right min-w-16 w-16">Total</th>
+                </tr>
+                </thead>
+                <tbody class="">
+                <tr class="border border-zinc-900 border-l-0 border-r-0 border-t-0">
+                    <td class="p-1  bg-red-500 text-center text-white text-bold ">&times;</td>
+                    <td class="p-1 flex-none " colspan="5">Galaxy A7 Tab</td>
+                    <td class="p-1 flex-grow text-right">10</td>
+                    <td class="p-1  text-right">&times;</td>
+                    <td class="p-1  text-right border-r border-zinc-400">$250.75</td>
+                    <td class="p-1  text-right">$2507.50</td>
 
-            <div id="cart-content">
-                <div class="flex flex-cols border-zinc-400 border border-t-0 text-xs
-                            hover:bg-zinc-300 transition duration-500">
-                    <p class="p-1 bg-red-500 text-white text-bold">&times;</p>
-                    <p class="p-1 flex-grow">Galaxy A7 Tab</p>
-                    <p class="p-1 text-right min-w-8 w-8">10</p>
-                    <p class="p-1 text-right w-4">&times;</p>
-                    <p class="p-1 text-right border-r border-zinc-400 min-w-16 w-16">$250.75</p>
-                    <p class="p-1 text-right min-w-16 w-16 ">$2507.50</p>
-                </div>
-
-                <div class="flex flex-cols border-zinc-400 border border-t-0 text-xs
-                            hover:bg-indigo-200 transition duration-500">
-                    <p class="p-1 bg-red-500 text-white text-bold">&times;</p>
-                    <p class="p-1 flex-grow">USB-3 64GB Thumb Drive</p>
-                    <p class="p-1 text-right min-w-8 w-8">1</p>
-                    <p class="p-1 text-right">&times;</p>
-                    <p class="p-1 text-right border-r border-zinc-400 min-w-16 w-16">$25.99</p>
-                    <p class="p-1 min-w-16 w-16 text-right">$25.99</p>
-                </div>
-            </div>
-
-            <footer id="cart-total"
-                    class="flex flex-cols border-zinc-400 border border-t-0 py-1 gap-1 bg-zinc-200 text-xs rounded-b-lg">
-                <p class="px-1 pl-6 text-right">
+                </tr>
+                <tr class="border border-zinc-900 border-l-0 border-r-0 border-t-0 flex">
+                    <td class="p-1 flex-none bg-red-500 text-white text-bold">&times;</td>
+                    <td class="p-1 flex-grow" colspan="5">USB-3 64GB Thumb Drive</td>
+                    <td class="p-1 text-right min-w-8 w-8">1</td>
+                    <td class="p-1 text-right">&times;</td>
+                    <td class="p-1 text-right border-r border-zinc-400 min-w-16 w-16">$25.99</td>
+                    <td class="p-1 text-right">$25.99</td>
+                </tr>
+                </tbody>
+                <tfoot id="cart-total" class="border-zinc-900 border py-1 gap-1 bg-zinc-200 text-xs rounded-b-lg">
+                <tr>
+                <td class="p-1 text-right" colspan="2">
                     <a href="" class="text-red-800 hover:text-red-500">Empty Cart</a>
-                </p>
-                <p class="px-1 flex-grow text-right font-bold">Total</p>
-                <p class="px-1 min-w-16 w-16 text-right">$2533.49</p>
-            </footer>
+                </td>
+                <td class="px-1 flex-grow text-right font-bold" colspan="2">Total</td>
+                <td class="px-1 text-right" colspan="2">$2533.49</td>
+                </tr>
+                </tfoot>
+            </table>
+
 
         </section>
 
-        <section class="flex-grow">
+        <section class="">
             <header class="">
                 <h3 class="text-lg text-bold mt-2 p-2">Items for Sale</h3>
             </header>
 
             <div id="items" class="grid grid-cols-4 gap-4 py-4">
 
-                <div id="item" class="border-zinc-400 border rounded">
+                <div id="item1" class="border-zinc-400 border rounded">
                     <p class="bg-zinc-500 text-white p-2">Galaxy A7 Tab</p>
                     <div class="text-xs">
                         <img src="assets/images/17137108849_c98e835d5f.jpg" class="w-full"
@@ -119,6 +126,8 @@
                         <p class="px-2 ">$2533.49</p>
                     </footer>
                 </div>
+
+
             </div>
 
         </section>
