@@ -19,39 +19,6 @@ const startButton = document.querySelector( '.js-start' )
 const info = document.querySelector( '.js-info' )
 
 // Methods for the game -----------------------------------
-function startGame() {
-    startButton.classList.add( "hidden" )
-    info.classList.remove( "hidden" )
-    info.textContent = "Wait for the computer..."
-    nextRound()
-}
-
-function nextRound() {
-    // Add one to the round count
-    level += 1
-    // disable mouse click events on the tiles
-    tileContainer.classList.add( "pointer-events-none" )
-    info.textContent = "Wait for the computer"
-    heading.textContent = `Level ${ level } of 20`
-    // copy all the elements in the "sequence" array to "nextSequence"
-    nextSequence = [ ...sequence ]
-    nextSequence.push( nextStep() ) // add a new tile to sequence
-    playRound( nextSequence )
-
-    sequence = [ ...nextSequence ]
-    setTimeout( () => {
-        humanTurn( level )
-    }, level * 600 + 1000 )
-}
-
-function nextStep() {
-    const tiles = [ 'red', 'green', 'blue', 'yellow' ]
-    const randomTile = tiles[Math.floor(
-        Math.random() * tiles.length
-    )]
-    return randomTile
-}
-
 function activateTile( colour ) {
     // find the tile and sound with colour on the page
     const theTile = document.querySelector( `[data-tile='${ colour }']` )
@@ -75,19 +42,6 @@ function activateTile( colour ) {
          )
         theTile.innerHTML = ""
     }, 300 )
-}
-
-function playRound( sequence ) {
-    nextSequence.forEach( ( colour, index ) => {
-        setTimeout( () => {
-            activateTile( colour )
-        }, ( index + 1 ) * 600 )
-    } )
-}
-
-function humanTurn( level ) {
-    tileContainer.classList.remove( 'pointer-events-none' )
-    info.textContent = `Your turn: ${ level } Tap${ level > 1 ? 's' : '' }`
 }
 
 function handleClick( tile ) {
@@ -135,6 +89,45 @@ function handleClick( tile ) {
     info.textContent = `Your turn: ${ level } Tap${ level > 1 ? 's' : '' }`
 }
 
+function humanTurn( level ) {
+    tileContainer.classList.remove( 'pointer-events-none' )
+    info.textContent = `Your turn: ${ level } Tap${ level > 1 ? 's' : '' }`
+}
+
+function nextRound() {
+    // Add one to the round count
+    level += 1
+    // disable mouse click events on the tiles
+    tileContainer.classList.add( "pointer-events-none" )
+    info.textContent = "Wait for the computer"
+    heading.textContent = `Level ${ level } of 20`
+    // copy all the elements in the "sequence" array to "nextSequence"
+    nextSequence = [ ...sequence ]
+    nextSequence.push( nextStep() ) // add a new tile to sequence
+    playRound( nextSequence )
+
+    sequence = [ ...nextSequence ]
+    setTimeout( () => {
+        humanTurn( level )
+    }, level * 600 + 1000 )
+}
+
+function nextStep() {
+    const tiles = [ 'red', 'green', 'blue', 'yellow' ]
+    const randomTile = tiles[Math.floor(
+        Math.random() * tiles.length
+    )]
+    return randomTile
+}
+
+function playRound( sequence ) {
+    nextSequence.forEach( ( colour, index ) => {
+        setTimeout( () => {
+            activateTile( colour )
+        }, ( index + 1 ) * 600 )
+    } )
+}
+
 function resetGame( text ) {
     alert( text )
     sequence = []
@@ -145,6 +138,13 @@ function resetGame( text ) {
     heading.textContent = "Simon!"
     info.classList.add( 'hidden' )
     tileContainer.classList.add( "pointer-events-none" )
+}
+
+function startGame() {
+    startButton.classList.add( "hidden" )
+    info.classList.remove( "hidden" )
+    info.textContent = "Wait for the computer..."
+    nextRound()
 }
 
 // Event Listeners ----------------------------------------
