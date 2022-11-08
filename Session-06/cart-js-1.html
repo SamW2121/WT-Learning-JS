@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="assets/css/tailwind.css">
 
     <!-- JS (Deferred) -->
-
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/catalogue.js" defer></script> <!-- Do not forget the defer! -->
 
     <!--
     Filename: demo-template.html
@@ -58,74 +59,8 @@
                 <h3 class="text-lg text-bold mt-0 px-2">Products</h3>
             </header>
 
-            <div id="catalogue" class="grid xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4 py-4">
-
-                <div id="product0" class="border-zinc-900 border rounded flex flex-col">
-                    <p class="bg-zinc-900 text-white p-2">Lego Space Shuttle</p>
-                    <div class="overflow-hidden p-1 flex-grow flex items-center">
-                        <img src="assets/images/10283.webp"
-                             class="align-middle"
-                             alt="Lego Space Shuttle- image from Lego.com - used for educational purposes only">
-                    </div>
-                    <div class="flex flex-cols text-sm rounded-b">
-                        <p class="bg-blue-200 py-2 px-4 overflow-hidden">Add</p>
-                        <p class="flex-grow text-right bg-zinc-200 p-2">$299.99</p>
-                    </div>
-                </div>
-
-                <div id="product1" class="border-zinc-900 border rounded flex flex-col">
-                    <p class="bg-zinc-900 text-white p-2">Galaxy S7 Tab Plus</p>
-                    <div class="overflow-hidden p-1 flex-grow flex items-center">
-                        <img src="assets/images/50072389_733738.webp"
-                             class="w-full"
-                             alt="Galaxy S7 Tab Plus - used for educational purposes only">
-                    </div>
-                    <div class="flex flex-cols text-sm rounded-b">
-                        <p class="bg-blue-200 py-2 px-4 ">Add</p>
-                        <p class="flex-grow text-right bg-zinc-200 p-2">$1144.00</p>
-                    </div>
-                </div>
-
-                <div id="product2" class="border-zinc-900 border rounded flex flex-col">
-                    <p class="bg-zinc-900 text-white p-2">Lego At-At&trade;</p>
-                    <div class="overflow-hidden p-1  flex-grow flex items-center">
-                        <img src="assets/images/75313_Prod.webp"
-                             class="align-middle"
-                             alt="Lego AT-AT - image from Lego.com - used for educational purposes only">
-                    </div>
-                    <div class="flex flex-cols text-sm rounded-b">
-                        <p class="bg-blue-200 py-2 px-4 ">Add</p>
-                        <p class="flex-grow text-right bg-zinc-200 p-2">$1299.99</p>
-                    </div>
-                </div>
-
-                <div id="product3" class="border-zinc-900 border rounded flex flex-col">
-                    <p class="bg-zinc-900 text-white p-2">Lego Razor Crest&trade;</p>
-                    <div class="overflow-hidden p-1  flex-grow flex items-center">
-                        <img src="assets/images/75331.webp"
-                             class="align-middle"
-                             alt="Razor Crest - image from Lego.com - used for educational purposes only">
-                    </div>
-                    <div class="flex flex-cols text-sm rounded-b">
-                        <p class="bg-blue-200 py-2 px-4 ">Add</p>
-                        <p class="flex-grow text-right bg-zinc-200 p-2">$899.99</p>
-                    </div>
-                </div>
-
-                <div id="product4" class="border-zinc-900 border rounded flex flex-col">
-                    <p class="bg-zinc-900 text-white p-2">Lego Minions&trade;</p>
-                    <div class="overflow-hidden p-1  flex-grow flex items-center">
-                        <img src="assets/images/40420.webp"
-                             class="align-middle"
-                             alt="Minions - image from Lego.com - used for educational purposes only">
-                    </div>
-                    <footer class="flex flex-cols text-sm rounded-b">
-                        <p class="bg-blue-200 py-2 px-4 ">Add</p>
-                        <p class="flex-grow text-right bg-zinc-200 p-2">$29.99</p>
-                    </footer>
-                </div>
-
-            </div>
+            <div id="catalogue"
+                 class="grid xl:grid-cols-6 lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4 py-4"></div>
 
         </section>
 
