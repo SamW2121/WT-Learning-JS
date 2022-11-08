@@ -8,6 +8,7 @@
     <title>PUT SITE NAME HERE | Demonstration Title Here</title>
 
     <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="assets/css/tailwind.css">
 
     <!-- JS (Deferred) -->
@@ -47,14 +48,243 @@
     </nav>
 </header>
 
-<main class="w-4/5 mx-auto p-6 my-8 grow border border-slate-300 rounded-lg flex flex-col">
-    <h1 class="text-4xl mb-8 mt-0 text-slate-500">Demonstration Title</h1>
+<main class="w-4/5 mx-auto p-6 my-8 grow border border-slate-300 rounded-lg grow h-1">
+    <h1 class="text-4xl mb-8 mt-0 text-slate-500">
+        JavaScript Demo Pages
+    </h1>
+    <p>The demonstrations are rated as B: Beginner, I: Intermediate, A:Advanced, G:Guru, X: Not Rated.</p>
 
     <div id="demo-area"
-         class="w-full font-light grow
-                bg-slate-100 text-slate-500 p-6 rounded-t
-                border border-slate-500">
-        Demonstration Area
+         class="w-full font-light
+                bg-slate-100 text-slate-500 rounded-t
+                border border-slate-500 p-4 grid grid-cols-4 align-center gap-4">
+        <!-- Demonstration Area -->
+
+        <a href="shopping.html"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-blue-500 rounded-full text-center align-bottom text-white">
+                A
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Shopping Cart</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-blue-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-shopping-cart text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="times-table.html"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-indigo-500 rounded-full text-center align-bottom text-white">
+                B
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Times Table</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-indigo-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-table text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="#"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-violet-500 rounded-full text-center align-bottom text-white">
+                I
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Simon! Game</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-violet-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-dice-d20 text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="clock.html"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20 hover:text-purple-800 hover:border-purple-800 transition duration-500 shadow">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-purple-500 rounded-full text-center align-bottom text-white">
+                B
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Javascript Clock</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-purple-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-clock text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="wiki-search.html"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-pink-500 rounded-full text-center align-bottom text-white">
+                B
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-pink-800 text-white overflow-hidden -m-2">
+                <i class="fa-brands fa-wikipedia-w text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="calculator.html"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-rose-500 rounded-full text-center align-bottom text-white">
+                I
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-rose-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-calculator text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="random-joke.html"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-red-500 rounded-full text-center align-bottom text-white">
+                B
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Random Joke</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-red-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-face-grin-tongue-wink text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="#"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-orange-500 rounded-full text-center align-bottom text-white">
+                X
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-orange-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-question text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="#"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-amber-500 rounded-full text-center align-bottom text-white">
+                X
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-amber-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-question text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="#"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-yellow-500 rounded-full text-center align-bottom text-white">
+                X
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-yellow-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-question text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="#"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-lime-500 rounded-full text-center align-bottom text-white">
+                X
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-lime-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-question text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="#"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-green-500 rounded-full text-center align-bottom text-white">
+                X
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-green-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-question text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="#"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-emerald-500 rounded-full text-center align-bottom text-white">
+                X
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-emerald-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-question text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="#"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-teal-500 rounded-full text-center align-bottom text-white">
+                X
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-teal-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-question text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="#"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-cyan-500 rounded-full text-center align-bottom text-white">
+                X
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-cyan-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-question text-5xl "></i>
+            </div>
+        </a>
+
+        <a href="#"
+           class="grid grid-cols-5 rounded-lg overflow-hidden border border-zinc-500 p-2 h-20">
+            <div class="h-16 w-16 pt-3 col-span-1 text-4xl bg-sky-500 rounded-full text-center align-bottom text-white">
+                X
+            </div>
+            <div class="col-span-3 p-2">
+                <h4 class="text=medium">Demonstration Name</h4>
+                <p>Short Description</p>
+            </div>
+            <div class="col-span-1 p-4 text-center overflow-hidden bg-sky-800 text-white overflow-hidden -m-2">
+                <i class="fa fa-question text-5xl "></i>
+            </div>
+        </a>
+
+
     </div>
 
     <div class="p-4 pb-4 text-sm
@@ -65,8 +295,37 @@
 </main>
 
 <footer class="mt-6 px-6 py-6 bg-slate-900 text-slate-500 text-xs flex flex-row gap-12">
-    <div class="flex grow">&copy; Copyright 2022 Adrian Gould &amp; YOUR NAME HERE</div>
-    <div class="flex-right">Creative Commons License to be added.</div>
+    <div class="flex grow flex-col">
+        <p>&copy; Copyright 2022 Adrian Gould &amp; YOUR NAME HERE</p>
+        <p>Fontawesome: https://fontawesome.com (<a class="font-medium" href="https://fontawesome.com/download">download</a>)</p>
+        <p>TailwindCSS: https://tailwindcss.com (<a class="font-medium" href="https://tailwindcss.com/docs/installation">Installation</a>)</p>
+    </div>
+    <div class="flex-right flex flex-col">
+        <p>Creative Commons License to be added.</p>
+        <div class="flex flex-row mt-2">
+            <div class="bg-gray-500 grow h-1"></div>
+            <div class="bg-slate-500 grow h-1"></div>
+            <div class="bg-neutral-500 grow h-1"></div>
+            <div class="bg-stone-500 grow h-1"></div>
+            <div class="bg-zinc-500 grow h-1"></div>
+            <div class="bg-pink-500 grow h-1"></div>
+            <div class="bg-rose-500 grow h-1"></div>
+            <div class="bg-red-500 grow h-1"></div>
+            <div class="bg-orange-500 grow h-1"></div>
+            <div class="bg-amber-500 grow h-1"></div>
+            <div class="bg-yellow-500 grow h-1"></div>
+            <div class="bg-lime-500 grow h-1"></div>
+            <div class="bg-green-500 grow h-1"></div>
+            <div class="bg-emerald-500 grow h-1"></div>
+            <div class="bg-teal-500 grow h-1"></div>
+            <div class="bg-cyan-500 grow h-1"></div>
+            <div class="bg-sky-500 grow h-1"></div>
+            <div class="bg-blue-500 grow h-1"></div>
+            <div class="bg-indigo-500 grow h-1"></div>
+            <div class="bg-violet-500 grow h-1"></div>
+            <div class="bg-purple-500 grow h-1"></div>
+        </div>
+    </div>
 </footer>
 </body>
 </html>
