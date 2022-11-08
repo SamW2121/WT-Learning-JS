@@ -8,7 +8,7 @@
     <title>PUT SITE NAME HERE | Demonstration Title Here</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="stylesheet" href="../Portfolio-Part3-sample/assets/css/tailwind.css">
 
     <!-- JS (Deferred) -->
     <script src="assets/js/filename-here.js" defer></script>
@@ -56,24 +56,46 @@
                 border border-slate-500
                 flex flex-col">
 
-        <div id="clockDate" class=" mx-auto text-center">
-            <div id="dayOfWeek" class="text-4xl">Wednesday</div>
-            <div id="monthDay" class="text-6xl">September 30</div>
+        <h2 class="text-4xl text-stone-600 text-bold p-8">Times Table</h2>
+
+        <div id="select-times-table" class="w-1/2 mx-auto">
+            <select name="multiplier" id="multiplier"
+                    class="w-full text-2xl">
+                <option value="0">1</option>
+                <option value="1">2</option>
+                <option value="2">3</option>
+                <option value="3">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12" selected>12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+            </select>
         </div>
-        <div id="clockTime" class="text-9xl flex flex-row mx-auto mt-12">
-            <div id="hours"
-                 class="p-6 px-2 pl-6 bg-green-900 text-green-100 font-mono rounded-l-2xl">
-                00
-            </div>
-            <div id="divider"
-                 class="p-6 px-2 bg-green-900 text-green-100 font-mono">
-                :
-            </div>
-            <div id="minutes"
-                 class="p-6 px-2 pr-6 bg-green-900 text-green-100 font-mono rounded-r-2xl">
-                00
-            </div>
+        <div id="results" class="text-3xl pt-4 pb-8 w-1/2 mx-auto text-gray-700">
+            <p class="hover:bg-sky-200 ease-in-out transition duration-350 grid grid-cols-5 text-center border border-0 border-b border-gray-300 py-2">
+                <span>1</span>
+                <span>&times;</span>
+                <span>12</span>
+                <span>=</span>
+                <span>12</span>
+            </p>
+
+            <p class="hover:bg-sky-200 ease-in-out transition duration-350 grid grid-cols-5 text-center border border-0 border-b border-gray-300 py-2">
+                <span>10</span>
+                <span>&times;</span>
+                <span>12</span>
+                <span>=</span>
+                <span>120</span>
+            </p>
         </div>
+
+    </div>
 
     </div>
 
