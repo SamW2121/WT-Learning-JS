@@ -40,7 +40,7 @@ data.forEach((product) => {
     let itemPrice = document.createElement("p")
     itemPrice.classList.add("text-center", "bg-zinc-200", "p-2")
     // Add the price in form $xxxx.xx
-    itemPrice.innerHTML = `$${(product.price / 100).toFixed(2)}`
+    itemPrice.innerHTML = `$${intToDec2DP(product.price)}`
     itemFooter.appendChild(itemPrice)
 
     // Add the add to cart button
@@ -115,6 +115,7 @@ document.getElementById("ClearCart").addEventListener("click", () => {
     localStorage.removeItem("cart")
     cart = []
     cartItems.innerHTML = '<div class="text-center p-2">Cart is Empty</div>'
+    theTotalCost.innerHTML = `$0.00`;
     updateCart(cart)
 });
 
