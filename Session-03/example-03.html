@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>JavaScript | Session 03 | Example 03</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- JS (Deferred) -->
+    <script src="assets/js/example-03.js" defer></script>
+
+    <!--
+    Filename: example-03.html
+    Project:  WT-Learning-JS
+    Author:   Adrian Gould <adrian.gould@nmtafe.wa.edu.au>
+    Created:  11/10/2022
+    Version:  ...
+    -->
+
+</head>
+<body class="h-screen flex flex-col">
+
+<header class="bg-gray-900 text-gray-50 w-100 p-4 flex flex-row gap-6">
+    <h1 class="text-bold"><a href="index.html" class="text-rose-500"> JavaScript </a></h1>
+    <nav class="flex flex-row gap-4">
+        <a href="example-01.html">Random Joke</a>
+        <a href="example-02.html">Wikipedia Search</a>
+        <a href="example-03.html">Digital Clock</a>
+        <a href="example-04.html">Calculator</a>
+    </nav>
+</header>
+
+<main class="w-4/5 mx-auto my-12 grow">
+    <h1 class="text-4xl mb-8 mt-4 text-emerald-500">Digital Clock</h1>
+
+    <section class="w-full bg-stone-100 border border-stone-500 rounded-xl
+                    overflow-hidden">
+        <div id="banner"
+             class="text-3xl bg-stone-300 p-4">
+            Your local time
+        </div>
+        <div id="clock"
+             class="bg-stone-700 text-stone-50 p-4 text-4xl rounded-b-lg">
+        </div>
+    </section>
+
+
+</main>
+
+<footer class="mt-6 px-6 py-6 bg-neutral-700 text-neutral-200 text-sm flex flex-row gap-12">
+    <div class="flex grow">&copy; Copyright 2022 Adrian Gould</div>
+    <div class="flex-right">Creative Commons License to be added.</div>
+</footer>
+</body>
+</html>

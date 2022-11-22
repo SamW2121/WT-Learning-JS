@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>JavaScript | Session 05 | Game Layout</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <!-- JS (Deferred) -->
+    <script src="assets/js/game.js" defer></script>
+
+    <!--
+    Filename: game-layout.html
+    Project:  WT-Learning-JS
+    Author:   Adrian Gould <adrian.gould@nmtafe.wa.edu.au>
+    Created:  11/10/2022
+    Version:  ...
+    -->
+
+</head>
+<body class="h-screen flex flex-col">
+
+<header class="bg-gray-900 text-gray-50 w-100 p-4 flex flex-row gap-6">
+    <h1 class="text-bold"><a href="index.html" class="text-indigo-300">JavaScript 5</a></h1>
+    <nav class="flex flex-row gap-4">
+        <a href="game-layout.html" class="border-b-2 border-indigo-400">Game layout</a>
+        <a href="game-js-1.html">Game JS Part I</a>
+        <a href="game-js-2.html">Game JS Part II</a>
+        <a href="game-js-3.html">Game JS Part III</a>
+    </nav>
+</header>
+
+<main class="w-4/5 mx-auto my-12 grow">
+
+    <h1 class="text-4xl mb-8 mt-4 text-zinc-500">Simon!</h1>
+
+    <div class="w-full text-xl font-light
+                bg-zinc-200 text-zinc-700 p-6 rounded-xl
+                border border-zinc-300
+                shadow-sm shadow-zinc-500">
+        <h2 class="js-heading text-2xl">Follow the leader game.</h2>
+    </div>
+
+    <div class="mt-8 p-6 rounded-xl
+                bg-zinc-100 text-zinc-700
+                border border-zinc-300
+                shadow-sm shadow-zinc-500
+                flex gap-8">
+
+        <section class="grid grid-cols-2 grid-rows-2 gap-8 pointer-events-none js-container">
+
+            <div class="border border-neutral-500 w-32 h-32 bg-red-700 rounded-xl
+                        inline-block align-baseline text-center text-3xl"
+                 data-tile="red"></div>
+            <div class="border border-neutral-500 w-32 h-32 bg-green-700 rounded-xl
+                        inline-block align-baseline text-center text-3xl"
+                 data-tile="green"></div>
+            <div class="border border-neutral-500 w-32 h-32 bg-blue-700 rounded-xl
+                        inline-block align-baseline text-center text-3xl"
+                 data-tile="blue"></div>
+            <div class="border border-neutral-500 w-32 h-32 bg-yellow-700 rounded-xl
+                        inline-block align-baseline text-center text-3xl"
+                 data-tile="yellow"></div>
+        </section>
+    </div>
+
+    <div class="hidden">
+        <audio src="assets/sounds/simonSound1.mp3"
+               data-sound="red" ></audio>
+        <audio src="assets/sounds/simonSound2.mp3"
+               data-sound="green" ></audio>
+        <audio src="assets/sounds/simonSound3.mp3"
+               data-sound="blue" ></audio>
+        <audio src="assets/sounds/simonSound4.mp3"
+               data-sound="yellow" ></audio>
+    </div>
+
+    <footer class="my-8">
+        <button class="w-32 p-4 rounded-full bg-neutral-500 text-white js-start">
+            Start
+        </button>
+        <span class="hidden p-6 w-full rounded-md border border-neutral-300 js-info"></span>
+        <div class="hidden bg-red-200 bg-green-200 bg-blue-200 bg-yellow-200"></div>
+    </footer>
+</main>
+
+<footer class="mt-6 px-6 py-6 bg-neutral-700 text-neutral-200 text-sm flex flex-row gap-12">
+    <div class="flex grow">&copy; Copyright 2022 Adrian Gould</div>
+    <div class="flex-right">Creative Commons License to be added.</div>
+</footer>
+</body>
+</html>
